@@ -1,0 +1,159 @@
+/* Notifications Styles */
+
+.notifications-container {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.notifications-container .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.notifications-container .page-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.notifications-container .page-header .notification-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.notifications-container .loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #666;
+}
+
+.notifications-container .error-message {
+  background-color: #fff1f0;
+  border: 1px solid #ffccc7;
+  color: #cf1322;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.notifications-container .empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  text-align: center;
+  color: #8c8c8c;
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.notifications-container .empty-state p {
+  max-width: 80%;
+  margin: 0;
+}
+
+.notifications-container .notifications-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.notifications-container .notifications-list .notification-group {
+  margin-bottom: 1.5rem;
+}
+
+.notifications-container .notifications-list .notification-group .notification-date {
+  font-size: 0.9rem;
+  color: #8c8c8c;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  padding: 0 0.5rem;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item {
+  display: flex;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-container .notifications-list .notification-group .notification-item.unread {
+  border-left: 4px solid #1890ff;
+  background-color: #f0f8ff;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item.read {
+  border-left: 4px solid transparent;
+  opacity: 0.8;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item .notification-icon {
+  flex: 0 0 40px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 1rem;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item .notification-content {
+  flex: 1;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item .notification-content .notification-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item .notification-content .notification-header .notification-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item .notification-content .notification-header .notification-time {
+  font-size: 0.8rem;
+  color: #8c8c8c;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item .notification-content .notification-message {
+  color: #505050;
+  margin-bottom: 0.5rem;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item .notification-content .notification-link {
+  display: inline-block;
+  color: #1890ff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item .notification-content .notification-link:hover {
+  text-decoration: underline;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item .notification-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.notifications-container .notifications-list .notification-group .notification-item .notification-actions button {
+  white-space: nowrap;
+} 

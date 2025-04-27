@@ -1,0 +1,320 @@
+/* Incidents Styles */
+
+/* Incidents List */
+.incidents-container {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.incidents-container .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.incidents-container .page-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.incidents-container .incidents-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.incidents-container .incidents-filters .filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.incidents-container .incidents-filters .filter-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #595959;
+}
+
+.incidents-container .incidents-filters select,
+.incidents-container .incidents-filters input {
+  padding: 0.5rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  min-width: 150px;
+}
+
+.incidents-container .incidents-table-container {
+  flex: 1;
+  overflow: auto;
+}
+
+.incidents-container .incidents-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.incidents-container .incidents-table th,
+.incidents-container .incidents-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.incidents-container .incidents-table th {
+  background-color: #fafafa;
+  font-weight: 600;
+  color: #262626;
+}
+
+.incidents-container .incidents-table tr:hover td {
+  background-color: #f5f5f5;
+}
+
+.incidents-container .incidents-table .incident-id {
+  font-weight: 600;
+  color: #1890ff;
+}
+
+.incidents-container .incidents-table .incident-title {
+  font-weight: 500;
+}
+
+.incidents-container .incidents-table .incident-severity {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  min-width: 80px;
+}
+
+.incidents-container .incidents-table .incident-severity.critical {
+  background-color: #fff1f0;
+  color: #cf1322;
+}
+
+.incidents-container .incidents-table .incident-severity.high {
+  background-color: #fff7e6;
+  color: #d46b08;
+}
+
+.incidents-container .incidents-table .incident-severity.medium {
+  background-color: #fffbe6;
+  color: #d4b106;
+}
+
+.incidents-container .incidents-table .incident-severity.low {
+  background-color: #f6ffed;
+  color: #389e0d;
+}
+
+.incidents-container .incidents-table .incident-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.incidents-container .incidents-table .incident-status.new {
+  background-color: #e6f7ff;
+  color: #1890ff;
+}
+
+.incidents-container .incidents-table .incident-status.in-progress {
+  background-color: #fff7e6;
+  color: #fa8c16;
+}
+
+.incidents-container .incidents-table .incident-status.resolved {
+  background-color: #f6ffed;
+  color: #52c41a;
+}
+
+.incidents-container .incidents-table .incident-status.closed {
+  background-color: #f9f9f9;
+  color: #8c8c8c;
+}
+
+.incidents-container .incidents-table .incident-assigned {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.incidents-container .incidents-table .user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #e6f7ff;
+  color: #1890ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.incidents-container .incidents-table .incident-date {
+  color: #8c8c8c;
+  font-size: 0.9rem;
+}
+
+/* Incident Detail Page */
+.incident-detail-container {
+  padding: 1rem;
+  height: 100%;
+}
+
+.incident-detail-container .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.incident-detail-container .page-header .header-title h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.incident-detail-container .page-header .header-id {
+  color: #8c8c8c;
+  font-size: 0.9rem;
+}
+
+.incident-detail-container .page-header .header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.incident-detail-container .incident-layout {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.incident-detail-container .incident-main {
+  flex: 1;
+}
+
+.incident-detail-container .incident-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.incident-detail-container .incident-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.incident-detail-container .incident-card .card-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.incident-detail-container .incident-card .card-body {
+  padding: 1.5rem;
+}
+
+.incident-detail-container .incident-description {
+  white-space: pre-line;
+  line-height: 1.6;
+}
+
+.incident-detail-container .incident-meta-item {
+  margin-bottom: 1rem;
+}
+
+.incident-detail-container .incident-meta-item:last-child {
+  margin-bottom: 0;
+}
+
+.incident-detail-container .incident-meta-label {
+  font-weight: 500;
+  color: #8c8c8c;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.incident-detail-container .incident-meta-value {
+  font-weight: 500;
+}
+
+.incident-detail-container .incident-timeline {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.incident-detail-container .timeline-item {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 1.5rem;
+}
+
+.incident-detail-container .timeline-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #1890ff;
+}
+
+.incident-detail-container .timeline-item:after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.75rem;
+  bottom: 0;
+  width: 2px;
+  background-color: #e6f7ff;
+}
+
+.incident-detail-container .timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.incident-detail-container .timeline-item:last-child:after {
+  display: none;
+}
+
+.incident-detail-container .timeline-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.incident-detail-container .timeline-user {
+  font-weight: 500;
+}
+
+.incident-detail-container .timeline-time {
+  color: #8c8c8c;
+  font-size: 0.9rem;
+}
+
+.incident-detail-container .timeline-content {
+  margin-bottom: 0.25rem;
+}
+
+.incident-detail-container .timeline-meta {
+  color: #8c8c8c;
+  font-size: 0.9rem;
+} 

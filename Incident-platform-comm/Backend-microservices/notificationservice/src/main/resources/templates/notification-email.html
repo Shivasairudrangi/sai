@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .content {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .priority-high {
+            color: #dc3545;
+        }
+        .priority-medium {
+            color: #ffc107;
+        }
+        .priority-low {
+            color: #28a745;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .footer {
+            font-size: 0.8em;
+            color: #6c757d;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h2 th:text="${title}">Notification Title</h2>
+    <p>
+        <span th:if="${priority == 1}" class="priority-high">High Priority</span>
+        <span th:if="${priority == 2 or priority == 3}" class="priority-medium">Medium Priority</span>
+        <span th:if="${priority == 4 or priority == 5}" class="priority-low">Low Priority</span>
+    </p>
+</div>
+
+<div class="content">
+    <p th:text="${message}">Notification message goes here.</p>
+
+    <div th:if="${actionUrl != null}">
+        <a th:href="${actionUrl}" th:text="${actionText ?: 'View Details'}" class="button">View Details</a>
+    </div>
+</div>
+
+<div class="footer">
+    <p>This is an automated notification from the Incident Communication Platform.</p>
+    <p>To manage your notification preferences, please visit the settings page.</p>
+    <p>Sent on <span th:text="${#temporals.format(createdAt, 'yyyy-MM-dd HH:mm')}">Date/Time</span></p>
+</div>
+</body>
+</html>

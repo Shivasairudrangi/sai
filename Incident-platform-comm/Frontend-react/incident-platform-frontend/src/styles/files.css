@@ -1,0 +1,246 @@
+/* File Manager Styles */
+
+.file-manager-container {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.file-manager-container .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.file-manager-container .page-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.file-manager-container .page-header .file-upload-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-manager-container .page-header .file-upload-wrapper .tag-selector {
+  width: 150px;
+}
+
+.file-manager-container .page-header .file-upload-wrapper .tag-selector .tag-select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+}
+
+.file-manager-container .page-header .file-upload-wrapper .tag-selector .tag-select:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.file-manager-container .page-header .file-upload-wrapper .file-upload-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #1890ff;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.file-manager-container .page-header .file-upload-wrapper .file-upload-btn:hover {
+  background-color: #40a9ff;
+}
+
+.file-manager-container .page-header .file-upload-wrapper .file-upload-btn:active {
+  background-color: #096dd9;
+}
+
+.file-manager-container .file-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.file-manager-container .file-tools .file-search {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.file-manager-container .file-tools .file-search input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.file-manager-container .file-tools .file-search input:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.file-manager-container .file-tools .bulk-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-manager-container .file-tools .bulk-actions span {
+  font-size: 0.9rem;
+  color: #595959;
+}
+
+.file-manager-container .loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #666;
+}
+
+.file-manager-container .error-message {
+  background-color: #fff1f0;
+  border: 1px solid #ffccc7;
+  color: #cf1322;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.file-manager-container .empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  text-align: center;
+  color: #8c8c8c;
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.file-manager-container .empty-state p {
+  max-width: 80%;
+  margin: 0;
+}
+
+.file-manager-container .files-table-container {
+  flex: 1;
+  overflow: auto;
+}
+
+.file-manager-container .files-table-container .files-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.file-manager-container .files-table-container .files-table th,
+.file-manager-container .files-table-container .files-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.file-manager-container .files-table-container .files-table th {
+  background-color: #fafafa;
+  font-weight: 600;
+  color: #262626;
+}
+
+.file-manager-container .files-table-container .files-table tr:hover td {
+  background-color: #f5f5f5;
+}
+
+.file-manager-container .files-table-container .files-table .file-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.file-manager-container .files-table-container .files-table .file-tags .tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #595959;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.file-manager-container .files-table-container .files-table .file-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.file-manager-container .files-table-container .files-table .file-actions button {
+  white-space: nowrap;
+}
+
+/* Button styles specific to file manager */
+.file-manager-container .btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.file-manager-container .btn.btn-primary {
+  background-color: #1890ff;
+  color: white;
+}
+
+.file-manager-container .btn.btn-primary:hover {
+  background-color: #40a9ff;
+}
+
+.file-manager-container .btn.btn-primary:active {
+  background-color: #096dd9;
+}
+
+.file-manager-container .btn.btn-secondary {
+  background-color: #f0f0f0;
+  color: #595959;
+}
+
+.file-manager-container .btn.btn-secondary:hover {
+  background-color: #d9d9d9;
+}
+
+.file-manager-container .btn.btn-secondary:active {
+  background-color: #bfbfbf;
+}
+
+.file-manager-container .btn.btn-danger {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.file-manager-container .btn.btn-danger:hover {
+  background-color: #ff7875;
+}
+
+.file-manager-container .btn.btn-danger:active {
+  background-color: #cf1322;
+}
+
+.file-manager-container .btn.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+.file-manager-container .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+} 

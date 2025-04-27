@@ -1,0 +1,245 @@
+// File Manager Styles
+
+.file-manager-container {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    
+    .file-upload-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      
+      .tag-selector {
+        width: 150px;
+        
+        .tag-select {
+          width: 100%;
+          padding: 0.5rem;
+          border-radius: 4px;
+          border: 1px solid #d9d9d9;
+          
+          &:focus {
+            outline: none;
+            border-color: #1890ff;
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+          }
+        }
+      }
+      
+      .file-upload-btn {
+        display: inline-block;
+        padding: 0.6rem 1.2rem;
+        background-color: #1890ff;
+        color: white;
+        border-radius: 4px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        
+        &:hover {
+          background-color: #40a9ff;
+        }
+        
+        &:active {
+          background-color: #096dd9;
+        }
+      }
+    }
+  }
+  
+  .file-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+    .file-search {
+      display: flex;
+      gap: 0.5rem;
+      width: 100%;
+      max-width: 500px;
+      
+      input {
+        flex: 1;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        
+        &:focus {
+          outline: none;
+          border-color: #1890ff;
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+        }
+      }
+    }
+    
+    .bulk-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      
+      span {
+        font-size: 0.9rem;
+        color: #595959;
+      }
+    }
+  }
+  
+  .loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #666;
+  }
+  
+  .error-message {
+    background-color: #fff1f0;
+    border: 1px solid #ffccc7;
+    color: #cf1322;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    text-align: center;
+    color: #8c8c8c;
+    background-color: #fafafa;
+    border-radius: 8px;
+    padding: 2rem;
+    
+    p {
+      max-width: 80%;
+      margin: 0;
+    }
+  }
+  
+  .files-table-container {
+    flex: 1;
+    overflow: auto;
+    
+    .files-table {
+      width: 100%;
+      border-collapse: collapse;
+      
+      th, td {
+        padding: 0.75rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      
+      th {
+        background-color: #fafafa;
+        font-weight: 600;
+        color: #262626;
+      }
+      
+      tr:hover td {
+        background-color: #f5f5f5;
+      }
+      
+      .file-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        
+        .tag {
+          display: inline-block;
+          background-color: #f0f0f0;
+          color: #595959;
+          font-size: 0.85rem;
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+        }
+      }
+      
+      .file-actions {
+        display: flex;
+        gap: 0.5rem;
+        
+        button {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  
+  // Button styles
+  .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+    
+    &.btn-primary {
+      background-color: #1890ff;
+      color: white;
+      
+      &:hover {
+        background-color: #40a9ff;
+      }
+      
+      &:active {
+        background-color: #096dd9;
+      }
+    }
+    
+    &.btn-secondary {
+      background-color: #f0f0f0;
+      color: #595959;
+      
+      &:hover {
+        background-color: #d9d9d9;
+      }
+      
+      &:active {
+        background-color: #bfbfbf;
+      }
+    }
+    
+    &.btn-danger {
+      background-color: #ff4d4f;
+      color: white;
+      
+      &:hover {
+        background-color: #ff7875;
+      }
+      
+      &:active {
+        background-color: #cf1322;
+      }
+    }
+    
+    &.btn-sm {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.85rem;
+    }
+    
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+} 
